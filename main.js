@@ -1,9 +1,3 @@
-
-import { createClient } from '@supabase/supabase-js'
-https://dlbhjbvdugpjwzipzyrx.supabase.co
-const supabaseUrl = 'https://dlbhjbvdugpjwzipzyrx.supabase.co'
-const supabaseKey = process.env.SUPABASE_KEY
-const supabase = createClient(supabaseUrl, supabaseKey)
 const STORAGE_KEY = 'notes-data-v1';
 const EXP_KEY = 'notes-expanded-v1';
 
@@ -41,52 +35,15 @@ let fileData = null;
 let expandedIds = new Set();
 
 function load() {
-    const raw = async function fetchNotes() {
-  const { data, error } = await supabase
-    .from('notes')
-    .select('*'); // '*' means get all columns
-
-  if (error) {
-    console.error('Error fetching notes:', error);
-  } else {
-    // 'data' is an array of your notes objects
-    // Now you can use this data to display your notes on the page
-    displayNotes(data);
-  }
-}
+    const raw = localStorage.getItem(STORAGE_KEY);
     fileData = raw ? JSON.parse(raw) : starter;
-    const exp = async function fetchNotes() {
-  const { data, error } = await supabase
-    .from('notes')
-    .select('*'); // '*' means get all columns
-
-  if (error) {
-    console.error('Error fetching notes:', error);
-  } else {
-    // 'data' is an array of your notes objects
-    // Now you can use this data to display your notes on the page
-    displayNotes(data);
-  }
-}
+    const exp = localStorage.getItem(EXP_KEY);
     expandedIds = exp ? new Set(JSON.parse(exp)) : new Set();
 }
 
 function save() {
-    async function createNote(noteTitle, noteContent) {
-  const { data, error } = await supabase
-    .from('notes') // The table name
-    .insert([
-      { title: noteTitle, content: noteContent }
-    ]);
-
-  if (error) {
-    console.error('Error creating note:', error);
-  } else {
-    console.log('Note created successfully:', data);
-    // You should probably re-fetch all notes here to update the UI
-    fetchNotes();
-  }
-}
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(fileData));
+    localStorage.setItem(EXP_KEY, JSON.stringify(Array.from(expandedIds)));
 }
 
 function generateId() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 8) }
