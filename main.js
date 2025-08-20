@@ -1,3 +1,9 @@
+
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = 'https://dlbhjbvdugpjwzipzyrx.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
 const STORAGE_KEY = 'notes-data-v1';
 const EXP_KEY = 'notes-expanded-v1';
 
