@@ -1,7 +1,7 @@
 # Tulika.io
 
 A Minimalist Web For Simple Note-Taking Experience.
-/n
+
 Tulika.io is a lightweight, browser-based note-taking application designed for clarity and focus. By leveraging the core technologies of the web—vanilla JavaScript, CSS, and HTML—it delivers a snappy and bloat-free experience that prioritizes your words above all else~
 
 Key Features:
