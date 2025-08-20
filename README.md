@@ -11,10 +11,13 @@ Key Features:
 
 The Uncluttered Canvas:
 Your writing space is a sanctuary. We've crafted a minimalist and responsive interface with custom CSS. The layout adapts gracefully from desktop to mobile, providing an optimal reading and writing experience on any device. Careful attention has been paid to typography, spacing, and color contrast to reduce eye strain and promote focus.
+
 Instantaneous Performance:
 Experience the raw speed of vanilla JavaScript. By eliminating the overhead of large frameworks, every action—from creating a new note to searching through your archive—is near-instantaneous.
+
 Your Data, Always Private:
 Your mind's content is yours alone. Tulika enforces this principle by storing all your notes locally on your device using your browser's localStorage. Nothing is ever sent to an external server. There are no accounts, no passwords to remember, and no risk of your private thoughts being mined or monetized.
+
 Core Functionality, Masterfully Executed:
 Behind the simple interface lies robust functionality engineered with pure JavaScript:
 Create, Edit, Delete: Manage your notes with intuitive actions.
