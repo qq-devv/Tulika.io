@@ -29,10 +29,15 @@ Your mind's content is yours alone. Tulika enforces this principle by storing al
  ۫   ׂ  ֢   ִ ꕀ  ˑ  ׅ  𑁯  𝅄  ֗  ⋆ ࣪.     ˖ ࣪⭑      ˖ ࣪ ٬     ุ๋ 
 
 Core Functionality, Masterfully Executed:
+
 Behind the simple interface lies robust functionality engineered with pure JavaScript:
+
 Create, Edit, Delete: Manage your notes with intuitive actions.
+
 Auto-Save: Your changes are saved automatically as you type, so you never lose a thought.
+
 Persistent Session: Reopen your browser to find your notes exactly as you left them.
+
 Dark Mode: Switching between Dark Mode and Light Mode will prevent your eye getting strained, good eye health, better visibility. <3
 
  ۫   ׂ  ֢   ִ ꕀ  ˑ  ׅ  𑁯  𝅄  ֗  ⋆ ࣪.     ˖ ࣪⭑      ˖ ࣪ ٬     ุ๋ 
