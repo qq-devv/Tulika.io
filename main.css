@@ -1,0 +1,189 @@
+:root {
+    font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+}
+
+#sidebar {
+    width: 260px;
+    border-right: 1px solid #ddd;
+    padding: 12px;
+    overflow: auto;
+}
+
+#main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#toolbar {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+button {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    cursor: pointer;
+}
+
+#content {
+    display: flex;
+    flex: 1;
+}
+
+#editor {
+    flex: 1;
+    padding: 12px;
+    border: 0;
+    outline: none;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+#preview {
+    width: 40%;
+    padding: 12px;
+    border-left: 1px solid #eee;
+    overflow: auto;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.item.file:hover,
+.item.folder:hover {
+    background: #f3f3f3;
+}
+
+.item.selected {
+    background: #e6f0ff;
+}
+
+.caret {
+    cursor: pointer;
+    user-select: none;
+    width: 16px;
+}
+
+.item-name {
+    flex: 1;
+    cursor: pointer;
+}
+
+.item-menu {
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#optionsModal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    z-index: 999;
+    display: none;
+    min-width: 280px;
+}
+
+#modalOverlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 998;
+    display: none;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 8px;
+}
+
+/* 🌙 Dark Mode */
+body.dark-mode {
+    background: #1e1e1e;
+    color: #ddd;
+}
+
+body.dark-mode #sidebar {
+    border-right: 1px solid #444;
+    background: #252526;
+}
+
+body.dark-mode #toolbar {
+    border-bottom: 1px solid #444;
+    background: #2d2d2d;
+}
+
+body.dark-mode button {
+    background: #333;
+    border: 1px solid #555;
+    color: #ddd;
+}
+
+body.dark-mode #editor {
+    background: #1e1e1e;
+    color: #eee;
+}
+
+body.dark-mode #preview {
+    background: #1e1e1e;
+    border-left: 1px solid #444;
+    color: #ccc;
+}
+
+body.dark-mode .item.file:hover,
+body.dark-mode .item.folder:hover {
+    background: #333;
+}
+
+body.dark-mode .item.selected {
+    background: #094771;
+}
+
+body.dark-mode #optionsModal {
+    background: #2d2d2d;
+    border: 1px solid #555;
+}
+
+body.dark-mode input[type="text"] {
+    background: #1e1e1e;
+    color: #eee;
+    border: 1px solid #555;
+}
+
+body.dark-mode #modalOverlay {
+    background: rgba(0, 0, 0, 0.5);
+}

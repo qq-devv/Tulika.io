@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Notes App — Fixed</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id="sidebar">
+        <div style="display:flex;gap:8px;margin-bottom:10px">
+            <button id="file">New File</button>
+            <button id="folder">New Folder</button>
+            <button id="collapseAll">Collapse All</button>
+        </div>
+        <div id="treeRoot"></div>
+    </div>
+
+    <div id="main">
+        <div id="toolbar">
+            <button id="sidebar-toggle-btn">Toggle Sidebar (Shift+T)</button>
+            <button id="preview-toggle">Toggle Preview (Shift+C)</button>
+            <button id="dark-mode-toggle">Toggle Dark Mode</button>
+            <div style="flex:1"></div>
+            <div id="currentPath" style="font-size:13px;color:#666">/</div>
+        </div>
+
+        <div id="content">
+            <textarea id="editor" placeholder="Select a file to start typing..."></textarea>
+            <div id="preview" class="markdown-body hidden"></div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modalOverlay"></div>
+    <div id="optionsModal" role="dialog" aria-modal="true">
+        <label>Rename</label>
+        <input id="renameInput" type="text" />
+        <div style="display:flex;gap:8px;justify-content:flex-end">
+            <button id="renameBtn">Rename</button>
+            <button id="deleteBtn" style="background:#fee">Delete</button>
+            <button id="cancelBtn">Cancel</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
